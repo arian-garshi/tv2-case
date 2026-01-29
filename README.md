@@ -20,3 +20,9 @@ VITE_OMDB_API_KEY=your_key_here
 ```
 
 If the API is down or the key is missing, the app falls back to mock data so it still works.
+
+## Tests
+
+```sh
+npm test        
+```

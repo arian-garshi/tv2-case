@@ -6,6 +6,7 @@ import Carousel from "./components/Carousel/Carousel";
 import { ClearButton } from "./components/Carousel/Carousel.styles";
 import MovieCard from "./components/MovieCard/MovieCard";
 import StatusMessage from "./components/StatusMessage/StatusMessage";
+import TPrinter from "./components/TPrinter";
 import { FiRefreshCw, FiTrash2 } from "react-icons/fi";
 import type { Movie } from "./types/omdb";
 
@@ -105,6 +106,8 @@ function App() {
           ))}
         </Carousel>
       )}
+
+      <TPrinter />
     </Page>
   );
 }
