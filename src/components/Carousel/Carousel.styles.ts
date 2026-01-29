@@ -16,9 +16,20 @@ export const SectionTitle = styled.h2`
   @media (min-width: 768px) {
     font-size: 24px;
   }
+
+  &:is(h1) {
+    font-size: 24px;
+
+    @media (min-width: 768px) {
+      font-size: 28px;
+    }
+  }
 `;
 
 export const ClearButton = styled.button`
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: rgba(255, 255, 255, 0.7);

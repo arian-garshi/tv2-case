@@ -13,10 +13,11 @@ import {
 interface CarouselProps {
   children: ReactNode;
   title?: string;
+  headingLevel?: "h1" | "h2";
   headerRight?: ReactNode;
 }
 
-const Carousel = ({ children, title, headerRight }: CarouselProps) => {
+const Carousel = ({ children, title, headingLevel = "h2", headerRight }: CarouselProps) => {
   const trackRef = useRef<HTMLDivElement>(null);
 
   useDragScroll(trackRef);
@@ -30,7 +31,7 @@ const Carousel = ({ children, title, headerRight }: CarouselProps) => {
     <div>
       {title && (
         <SectionHeader>
-          <SectionTitle>{title}</SectionTitle>
+          <SectionTitle as={headingLevel}>{title}</SectionTitle>
           {headerRight}
         </SectionHeader>
       )}
